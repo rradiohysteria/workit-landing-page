@@ -1,0 +1,157 @@
+@use 'globals' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative;
+    background-color: $purple-100;
+}
+
+.header {
+    background-color: $purple-900;
+    padding: $spacing-400 $spacing-250 0rem $spacing-250;
+
+    &__nav {
+        @include flex(row, center, space-between);
+    }
+}
+
+.hero_wrapper {
+    background-color: $purple-100;
+}
+
+.value_wrapper {
+    background-color: $white;
+}
+
+.hero {
+    background-color: $purple-900;
+    padding: $spacing-700 $spacing-250 $spacing-1800 $spacing-250;
+    clip-path: ellipse(130% 100% at top);
+    margin-bottom: $spacing-1000;
+
+    &__content {
+        @include flex(column, center, center);
+        gap: $spacing-500;
+    }
+
+    h1 {
+        color: $white;
+        @include text-1;
+        & {
+            text-align: center;
+        }
+    }
+
+    .underlined {
+        text-decoration: underline;
+        text-decoration-color: $green;
+        text-decoration-thickness: 3px;
+    }
+}
+
+.hero_img {
+    position: absolute;
+    width: 90vw;
+    top: 13.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+}
+
+.value {
+    background-color: $purple-100;
+    padding: $spacing-800 $spacing-250;
+    @include flex(column, center, center);
+    gap: $spacing-400;
+    text-align: center;
+    clip-path: ellipse(200% 100% at top);
+
+    &__item {
+        @include flex(column, center, center);
+        gap: $spacing-300;
+
+        .number {
+            border: 1px solid $purple-900;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            @include flex(row, center, center);
+        }
+
+        .text {
+            @include flex(column, center, center);
+            gap: $spacing-200;
+        }
+
+        h2, .number {
+            @include text-3;
+        }
+
+        p {
+            @include text-4;
+        }
+    }
+}
+
+.cta {
+    background-color: $white;
+    padding: $spacing-1400 $spacing-250 0rem $spacing-250;
+    @include flex(column, center, center);
+
+    img {
+        width: 80vw;
+    }
+
+    &__content {
+        background-color: $purple-900;
+        color: $white;
+        @include flex(column, center, center);
+        padding: $spacing-400;
+        gap: $spacing-400;
+        transform: translateY(-13%);
+        text-align: center;
+
+        h2 {
+            @include text-2;
+        }
+
+        p {
+            @include text-4;
+        }
+    }
+}
+
+.footer {
+    padding: $spacing-1000;
+    @include flex(column, center, center);
+    gap: $spacing-550;
+
+    &__socials {
+        @include flex(row, center, center);
+        gap: $spacing-350;
+    }
+}
+
+.btn-primary {
+    border: none;
+    background-color: $green;
+    color: $purple-900;
+    @include btn-text;
+    & {
+        padding: $spacing-150 $spacing-400;
+    }
+}
+
+.btn-secondary {
+    @include btn-text;
+    & {
+        text-decoration: none;
+        border-bottom: 3px solid $green;
+        color: $white;
+    }
+}

@@ -1,0 +1,100 @@
+@use 'variables' as *;
+
+@mixin fraunces {
+    @font-face {
+        font-family: 'Fraunces';
+        src: url('../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format("opentype");
+    }
+}
+
+@mixin manrope {
+    @font-face {
+        font-family: "Manrope";
+        src: url('../assets/fonts/manrope/Manrope-VariableFont_wght.ttf') format('opentype');
+    }
+}
+
+@mixin btn-text {
+    @include manrope;
+    & {
+        font-family: "Manrope";
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1.5;
+    }
+}
+
+@mixin text-1 {
+    @include fraunces;
+    & {
+        font-family: "Fraunces";
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 3.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 5rem;
+    }
+}
+
+@mixin text-2 {
+    @include fraunces;
+    & {
+        font-family: "Fraunces";
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 3rem;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 3.5rem;
+    }
+}
+
+@mixin text-3 {
+    @include fraunces;
+    & {
+        font-family: "Fraunces";
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 1.75rem;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 2rem;
+    }
+}
+
+@mixin text-4 {
+    @include manrope;
+    & {
+        font-family: "Manrope";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.8;
+    }
+    
+    @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 1.125rem;
+    }
+}
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
