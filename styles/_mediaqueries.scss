@@ -1,0 +1,139 @@
+@use 'globals' as *;
+
+@media screen and (min-width: $breakpoint-tablet) {
+    .header {
+        padding: $spacing-400 $spacing-550 0rem $spacing-550;
+    }
+
+    .hero {
+        padding: $spacing-700 $spacing-550 $spacing-2100 $spacing-550;
+        margin-bottom: $spacing-1600;
+        @include flex(column, center, center);
+        
+        &__content {
+            width: 65%;
+        }
+    }
+
+    .decoration-left {
+        display: inline;
+    }
+
+    .decoration-right {
+        display: inline;
+    }
+
+    .hero_img {
+        width: 65vw;
+        top: 16%;
+    }
+
+    .value {
+        padding: $spacing-700 $spacing-550 $spacing-1600 $spacing-550;
+        clip-path: ellipse(100% 100% at top);
+        
+        &__item {
+            flex-direction: row;
+            gap: $spacing-700;
+
+            .text {
+                align-items: flex-start;
+                text-align: start;
+            }
+        }
+    }
+    
+    .cta {
+        padding: $spacing-1400 $spacing-550 0rem $spacing-550;
+        align-items: flex-start;
+        
+        img {
+            width: 35vw;
+        }
+
+        &__content {
+            padding: $spacing-600;
+            width: 75%;
+            translate: 34% -15%;
+            align-items: flex-start;
+        }
+    }
+
+    .cta-decoration {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
+    .header {
+        padding: $spacing-700 $spacing-1000 0rem $spacing-1000;
+    }
+    
+    .hero {
+        padding: $spacing-700 $spacing-1000 $spacing-3700 $spacing-1000;
+        margin-bottom: $spacing-2100;
+
+        &__content {
+            width: 50%;
+        }
+    }
+
+    .decoration-left {
+        top: 2%;
+        left: -6%;
+    }
+
+    .decoration-right {
+        top: 10%;
+        right: -3%;
+    }
+
+    .hero_img {
+        width: 50vw;
+        top: 16%;
+    }
+
+    .value {
+        padding: $spacing-1100 $spacing-1000 15rem $spacing-1000;
+        flex-direction: row;
+        align-items: stretch;
+        
+        &__item {
+            flex-direction: column;
+            gap: $spacing-700;
+            flex: 1;
+
+            .text {
+                align-items: center;
+                text-align: center;
+                gap: $spacing-300;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .cta {
+        padding: $spacing-1400 $spacing-1000 0rem $spacing-1000;
+        align-items: center;
+        margin-bottom: -20%;
+        
+        img {
+            translate: -60%;
+        }
+
+        &__content {
+            padding: $spacing-800;
+            width: 60%;
+            translate: 34% -60%;
+            align-items: flex-start;
+        }
+    }
+
+    .cta-decoration {
+        bottom: -3%;
+    }
+
+    .footer {
+        padding: $spacing-1400;
+    }
+}

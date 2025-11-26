@@ -7,6 +7,7 @@
 main {
   position: relative;
   background-color: #fcf8ff;
+  overflow: hidden;
 }
 
 .header {
@@ -59,7 +60,7 @@ main {
     font-size: 3.75rem;
   }
 }
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 64rem) {
   .hero h1 {
     font-size: 5rem;
   }
@@ -71,6 +72,20 @@ main {
   text-decoration: underline;
   text-decoration-color: #44ffa1;
   text-decoration-thickness: 3px;
+}
+
+.decoration-left {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -29%;
+}
+
+.decoration-right {
+  display: none;
+  position: absolute;
+  top: 8%;
+  right: -11%;
 }
 
 .hero_img {
@@ -103,12 +118,21 @@ main {
 .value__item .number {
   border: 1px solid #24053e;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  min-width: 3rem;
+  min-height: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("opentype");
+}
+.value__item .number {
+  font-family: "Fraunces";
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 .value__item .text {
   display: flex;
@@ -121,19 +145,19 @@ main {
   font-family: "Fraunces";
   src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("opentype");
 }
-.value__item h2, .value__item .number {
+.value__item h2 {
   font-family: "Fraunces";
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.2;
 }
 @media screen and (min-width: 48rem) {
-  .value__item h2, .value__item .number {
+  .value__item h2 {
     font-size: 1.75rem;
   }
 }
-@media screen and (min-width: 90rem) {
-  .value__item h2, .value__item .number {
+@media screen and (min-width: 64rem) {
+  .value__item h2 {
     font-size: 2rem;
   }
 }
@@ -147,7 +171,7 @@ main {
   font-weight: 400;
   line-height: 1.8;
 }
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 64rem) {
   .value__item p {
     font-size: 1.125rem;
   }
@@ -165,6 +189,7 @@ main {
   width: 80vw;
 }
 .cta__content {
+  display: block;
   background-color: #24053e;
   color: #fff;
   display: flex;
@@ -174,7 +199,6 @@ main {
   padding: 2rem;
   gap: 2rem;
   transform: translateY(-13%);
-  text-align: center;
 }
 @font-face {
   font-family: "Fraunces";
@@ -191,7 +215,7 @@ main {
     font-size: 3rem;
   }
 }
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 64rem) {
   .cta__content h2 {
     font-size: 3.5rem;
   }
@@ -206,14 +230,22 @@ main {
   font-weight: 400;
   line-height: 1.8;
 }
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 64rem) {
   .cta__content p {
     font-size: 1.125rem;
   }
 }
 
+.cta-decoration {
+  display: none;
+  position: absolute;
+  bottom: -1%;
+  right: 8%;
+}
+
 .footer {
   padding: 5rem;
+  padding-top: calc(5rem - 13%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,4 +293,119 @@ main {
   text-decoration: none;
   border-bottom: 3px solid #44ffa1;
   color: #fff;
+}
+
+@media screen and (min-width: 48rem) {
+  .header {
+    padding: 2rem 2.75rem 0rem 2.75rem;
+  }
+  .hero {
+    padding: 3.5rem 2.75rem 10.5rem 2.75rem;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero__content {
+    width: 65%;
+  }
+  .decoration-left {
+    display: inline;
+  }
+  .decoration-right {
+    display: inline;
+  }
+  .hero_img {
+    width: 65vw;
+    top: 16%;
+  }
+  .value {
+    padding: 3.5rem 2.75rem 8rem 2.75rem;
+    clip-path: ellipse(100% 100% at top);
+  }
+  .value__item {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+  .value__item .text {
+    align-items: flex-start;
+    text-align: start;
+  }
+  .cta {
+    padding: 7rem 2.75rem 0rem 2.75rem;
+    align-items: flex-start;
+  }
+  .cta img {
+    width: 35vw;
+  }
+  .cta__content {
+    padding: 3rem;
+    width: 75%;
+    translate: 34% -15%;
+    align-items: flex-start;
+  }
+  .cta-decoration {
+    display: inline;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .header {
+    padding: 3.5rem 5rem 0rem 5rem;
+  }
+  .hero {
+    padding: 3.5rem 5rem 18.5rem 5rem;
+    margin-bottom: 10.5rem;
+  }
+  .hero__content {
+    width: 50%;
+  }
+  .decoration-left {
+    top: 2%;
+    left: -6%;
+  }
+  .decoration-right {
+    top: 10%;
+    right: -3%;
+  }
+  .hero_img {
+    width: 50vw;
+    top: 16%;
+  }
+  .value {
+    padding: 5.5rem 5rem 15rem 5rem;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .value__item {
+    flex-direction: column;
+    gap: 3.5rem;
+    flex: 1;
+  }
+  .value__item .text {
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    flex-grow: 1;
+  }
+  .cta {
+    padding: 7rem 5rem 0rem 5rem;
+    align-items: center;
+    margin-bottom: -20%;
+  }
+  .cta img {
+    translate: -60%;
+  }
+  .cta__content {
+    padding: 4rem;
+    width: 60%;
+    translate: 34% -60%;
+    align-items: flex-start;
+  }
+  .cta-decoration {
+    bottom: -3%;
+  }
+  .footer {
+    padding: 7rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

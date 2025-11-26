@@ -37,7 +37,7 @@
         font-size: 3.75rem;
     }
 
-    @media screen and (min-width: $breakpoint-desktop) {
+    @media screen and (min-width: $breakpoint-laptop) {
         font-size: 5rem;
     }
 }
@@ -55,7 +55,7 @@
         font-size: 3rem;
     }
 
-    @media screen and (min-width: $breakpoint-desktop) {
+    @media screen and (min-width: $breakpoint-laptop) {
         font-size: 3.5rem;
     }
 }
@@ -73,7 +73,7 @@
         font-size: 1.75rem;
     }
 
-    @media screen and (min-width: $breakpoint-desktop) {
+    @media screen and (min-width: $breakpoint-laptop) {
         font-size: 2rem;
     }
 }
@@ -87,7 +87,7 @@
         line-height: 1.8;
     }
     
-    @media screen and (min-width: $breakpoint-desktop) {
+    @media screen and (min-width: $breakpoint-laptop) {
         font-size: 1.125rem;
     }
 }
