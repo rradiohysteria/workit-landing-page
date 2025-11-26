@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  position: relative;
+}
+
 main {
   position: relative;
   background-color: #fcf8ff;
@@ -239,7 +243,7 @@ main {
 .cta-decoration {
   display: none;
   position: absolute;
-  bottom: -1%;
+  bottom: 8%;
   right: 8%;
 }
 
@@ -258,6 +262,9 @@ main {
   align-items: center;
   justify-content: center;
   gap: 1.75rem;
+}
+.footer__socials img:hover {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(11%) saturate(6893%) hue-rotate(244deg) brightness(98%) contrast(117%);
 }
 
 .btn-primary {
@@ -278,6 +285,13 @@ main {
 .btn-primary {
   padding: 0.75rem 2rem;
 }
+.btn-primary:hover {
+  outline: 3px solid #44ffa1;
+  outline-offset: -3px;
+  background-color: transparent;
+  color: #44ffa1;
+  transition: background-color 0.1s ease-in-out;
+}
 
 @font-face {
   font-family: "Manrope";
@@ -293,6 +307,11 @@ main {
   text-decoration: none;
   border-bottom: 3px solid #44ffa1;
   color: #fff;
+  transition: color 0.1s ease-in-out;
+}
+.btn-secondary:hover {
+  color: #44ffa1;
+  transition: color 0.1s ease-in-out;
 }
 
 @media screen and (min-width: 48rem) {
@@ -391,19 +410,20 @@ main {
   .cta {
     padding: 7rem 5rem 0rem 5rem;
     align-items: center;
-    margin-bottom: -20%;
+    margin-bottom: -15%;
   }
   .cta img {
     translate: -60%;
   }
   .cta__content {
     padding: 4rem;
-    width: 60%;
+    width: 57%;
     translate: 34% -60%;
     align-items: flex-start;
   }
   .cta-decoration {
-    bottom: -3%;
+    bottom: 13%;
+    right: 15%;
   }
   .footer {
     padding: 7rem;

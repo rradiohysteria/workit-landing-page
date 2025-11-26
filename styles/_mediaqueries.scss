@@ -115,7 +115,7 @@
     .cta {
         padding: $spacing-1400 $spacing-1000 0rem $spacing-1000;
         align-items: center;
-        margin-bottom: -20%;
+        margin-bottom: -15%;
         
         img {
             translate: -60%;
@@ -123,14 +123,15 @@
 
         &__content {
             padding: $spacing-800;
-            width: 60%;
+            width: 57%;
             translate: 34% -60%;
             align-items: flex-start;
         }
     }
 
     .cta-decoration {
-        bottom: -3%;
+        bottom: 13%;
+        right: 15%;
     }
 
     .footer {
